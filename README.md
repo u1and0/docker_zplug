@@ -8,6 +8,7 @@ docker run -it --rm -v `pwd`:/work -w /work u1and0/zplug
 ```
 
 # Version
+v0.2.0: pacman -Syu & base image=u1and0/archlinux:latest
 v0.1.0: zplug install
 
 
@@ -33,4 +34,4 @@ v0.1.0: zplug install
     * zsh-users/zsh-syntax-highlighting
     * esc/conda-zsh-completion
     * u1and0/fzf-extras
-* dotfiles v1.13.1
+* dotfiles v1.13.3
