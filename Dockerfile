@@ -1,9 +1,8 @@
 FROM u1and0/archlinux:latest
 
 # Reinstall packages required by zplug
-RUN pacman -Sy --noconfirm zsh awk git &&\
-    export ZPLUG_HOME=/root/.zplug &&\
-    git clone https://github.com/zplug/zplug ${ZPLUG_HOME}
+RUN pacman -Syu --noconfirm zsh awk git &&\
+    git clone https://github.com/zplug/zplug ${HOME}/.zplug 
 
 # Install zplug plugins
 RUN zsh -c "source /root/.zshrc &&\
