@@ -1,4 +1,4 @@
-FROM u1and0/archlinux:v0.5.0
+FROM u1and0/archlinux:latest
 
 # Reinstall packages required by zplug
 RUN pacman -Sy --noconfirm zsh awk git &&\
@@ -16,4 +16,4 @@ CMD ["/usr/bin/zsh"]
 LABEL maintainer="u1and0 <e01.ando60@gmail.com>"\
       description="zplug in archlinux"\
       description.ja="zplug in archlinux"\
-      version="zplug v0.1.0"
+      version="zplug v0.2.0"
