@@ -1,4 +1,6 @@
-Dockerfile for [u1nd0/zplug](https://cloud.docker.com/repository/docker/u1and0/zplug)
+Dockerfile for [u1and0/zplug](http://hub.docker.com/r/u1and0/zplug)
+
+![png](https://raw.githubusercontent.com/u1and0/docker_zplug/u1and0-patch-1-1/Screenshot%20from%202019-01-27%2017-44-12.png)
 
 # Install
 
@@ -8,13 +10,15 @@ docker run -it --rm -v `pwd`:/work -w /work u1and0/zplug
 ```
 
 # Version
+* v0.2.2: [add] screenshot @README.md
+* v0.2.1: [mod] not upgrade in pacman
 * v0.2.0: pacman -Syu & base image=u1and0/archlinux:latest
 * v0.1.0: zplug install
 
 
 # Description
-* u1and0/archlinux container v0.7.0
-* dotfiles v1.13.3
+* u1and0/archlinux container v2.0.0
+* dotfiles v1.13.5
 * zplug
     * zsh-users/zsh-completions
     * junegunn/fzf-bin
