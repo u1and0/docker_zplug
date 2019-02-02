@@ -17,8 +17,8 @@ docker run -it --rm -v `pwd`:/work -w /work u1and0/zplug
 
 
 # Description
-* u1and0/archlinux container v0.7.0
-* dotfiles v1.13.3
+* u1and0/archlinux container v2.0.0
+* dotfiles v1.13.5
 * zplug
     * zsh-users/zsh-completions
     * junegunn/fzf-bin
