@@ -2,7 +2,7 @@ FROM u1and0/archlinux:latest
 
 # Reinstall packages required by zplug
 RUN pacman -Syu --noconfirm zsh awk git &&\
-    git clone --depth 1 https://github.com/zplug/zplug ${HOME}/.zplug 
+    git clone --depth 1 https://github.com/zplug/zplug ${HOME}/.zplug
 
 # Install zplug plugins
 RUN zsh -ic "source /root/.zshrc &&\
