@@ -25,4 +25,4 @@ CMD ["/usr/bin/zsh"]
 
 LABEL maintainer="u1and0 <e01.ando60@gmail.com>"\
       description="OS=archlinux editor=neovim shell=zsh_with_zplug"\
-      version="zplug v5.0.0"
+      version="zplug v5.1.0"

@@ -10,10 +10,12 @@ docker run -it --rm -v `pwd`:/work -w /work u1and0/zplug
 ```
 
 # Version
-* v0.2.2: [add] screenshot @README.md
-* v0.2.1: [mod] not upgrade in pacman
-* v0.2.0: pacman -Syu & base image=u1and0/archlinux:latest
-* v0.1.0: zplug install
+* v5.1.0          [mod] rebuild base from u1and0/neovim:v5.1.0
+* v5.0.0          [mod] from u1and0/archlinux user u1and0
+* v0.2.2          [add] screenshot @README.md
+* v0.2.1          [mod] not upgrade in pacman
+* v0.2.0          pacman -Syu & base image=u1and0/archlinux:latest
+* v0.1.0          zplug install
 
 
 # Description
