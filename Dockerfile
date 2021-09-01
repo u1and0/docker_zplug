@@ -20,9 +20,9 @@ RUN git clone --depth 1 https://github.com/zplug/zplug .zplug &&\
             source .zplug/init.zsh &&\
             source .zplug.zsh &&\
             zplug install"
-
+ENV SHELL="/usr/bin/zsh"
 CMD ["/usr/bin/zsh"]
 
 LABEL maintainer="u1and0 <e01.ando60@gmail.com>"\
       description="OS=archlinux editor=neovim shell=zsh_with_zplug"\
-      version="zplug v5.1.0"
+      version="zplug v5.1.1"
