@@ -11,10 +11,11 @@ FROM u1and0/neovim:latest
 
 # Reinstall packages required by zplug
 USER root
-RUN pacman -Sy --noconfirm archlinux-keyring
-RUN pacman -Syyu --noconfirm zsh awk tig &&\
+RUN pacman -Sy --noconfirm archlinux-keyring &&\
+    pacman -Syyu --noconfirm zsh awk bat &&\
+    yay -Su --noconfirm gitflow-avh &&\
     : "Remove cache" &&\
-    pacman -Qtdq | xargs -r sudo pacman --noconfirm -Rcns
+    pacman -Qtdq | xargs -r pacman --noconfirm -Rcns
 
 # Install zplug plugins
 # zplug install でエラー
@@ -28,4 +29,4 @@ CMD ["/usr/bin/zsh"]
 
 LABEL maintainer="u1and0 <e01.ando60@gmail.com>"\
       description="OS=archlinux editor=neovim shell=zsh_with_zplug"\
-      version="zplug v6.0.0"
+      version="zplug v6.0.1"
