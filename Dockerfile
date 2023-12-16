@@ -13,15 +13,16 @@ FROM u1and0/neovim:latest
 USER root
 RUN pacman -Sy --noconfirm archlinux-keyring &&\
     pacman -Syyu --noconfirm zsh awk bat &&\
-    yay -Su --noconfirm gitflow-avh &&\
-    : "Remove cache" &&\
     pacman -Qtdq | xargs -r pacman --noconfirm -Rcns
+USER u1and0
+RUN yay -Su --noconfirm gitflow-avh &&\
+    : "Remove cache" &&\
+    yay -Qtdq | xargs -r yay --noconfirm -Rcns
 
 # Install zplug plugins
 # zplug install でエラー
 #0 2.539 [zplug] WARNING: pipe syntax is deprecated! Please use 'on' tag instead.
 # 解決策がわからないのでとりあえず`|| exit0`
-USER u1and0
 RUN git clone --depth 1 https://github.com/zplug/zplug .zplug &&\
     zsh -ic "source .zshrc && zplug install" || exit 0
 ENV SHELL="/usr/bin/zsh"
